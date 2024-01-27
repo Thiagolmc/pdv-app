@@ -11,13 +11,13 @@ export class UsuarioService {
   }
 
   userAutenticado() {
-    this.token = localStorage.getItem('token');
-    console.info(this.token);
-    if (this.token !== null &&
-      this.token.toString().trim() !== null) {
+    // this.token = localStorage.getItem('token');
+    // console.info(this.token);
+    // if (this.token !== null &&
+    //   this.token.toString().trim() !== null) {
       return true;
-    } else {
-      return false;
-    }
+    // } else {
+    //   return false;
+    // }
   }
 }

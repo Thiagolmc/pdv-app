@@ -27,16 +27,18 @@ export class LoginService {
 
 
   login(usuario: any) {
-    return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe(data => {
-      /*Retorno Http*/
-      var token = JSON.parse(JSON.stringify(data)).Authorization.split(' ')[1];
-      localStorage.setItem("token", token);
-      this.router.navigate(['home']);
-    },
-      error => {
-        console.error("Erro ao fazer login ");
-        alert('Acesso Negado!')
-      }
-    );
+    //this.router.navigate(['home']);
+
+    // return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe(data => {
+    //   /*Retorno Http*/
+      //  var token = JSON.parse(JSON.stringify('teste')).Authorization.split(' ')[1];
+      //  localStorage.setItem("token", token);
+       this.router.navigate(['home']);
+    // },
+    //   error => {
+    //     console.error("Erro ao fazer login ");
+    //     alert('Acesso Negado!')
+    //   }
+    // );
   }
 }
